@@ -1,0 +1,24 @@
+- update Kill
+    cd Kill
+    git pull
+
+- update FileSystem
+    cd FileSystem
+    git pull
+
+update cBugId
+    cd cBugId
+    git pull
+
+- python 2.7 (x64)
+    Computer->Properties->Advanced system settings->Advanced->Environment Variables
+        Path += ;C:\Python27\
+
+- beautiful soup 4
+    C:\Python27\Scripts\pip.exe install bs4
+
+- wdk (includes windbg)
+    probably needs https://support.microsoft.com/en-us/kb/2999226
+    c:\program files (x86)\windows kits\10\debuggers\x64
+        gflags /i iexplore.exe +hpa - heap page allocator
+        gflags /i iexplore.exe +ust - user mode stack trace

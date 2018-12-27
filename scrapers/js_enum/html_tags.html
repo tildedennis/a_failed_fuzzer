@@ -1,0 +1,23 @@
+
+    <html>
+    <head>
+    <script>
+    var elements = ['bgsound','code','rtc','feconvolvematrix','text','spacer','feoffset','customtag:green','desc','font','public:attach','xml','title','menu','tt','tr','tfoot','th','circle','dl','fieldset','customtag:red','dd','sup','stop','feblend','nobr','meter','optgroup','dt','textpath','h','button','summary','p','femergenode','small','x','div','dir','set','datalist','frame','mroot','customtag:blue','hgroup','video','clippath','mglyph','fecomponenttransfer','sub','pattern','section','bdi','label','float_left','template','munder','progress','metadata','body','ms','basefont','mfrac','address','feimage','strong','legend','generator','fediffuselighting','s','tspan','col','myns:abc','ci','cn','header','article','marker','apply','select','noframes','msubsup','use','annotation-xml','mmultiscripts','mstyle','mark','blockquote','mtable','strike','thead','ruby','td','customer','none','mo','mn','mi','n','del','iframe','v','fefunca','fefuncb','fepointlight','figure','fefuncg','fedistantlight','fefuncr','animatetransform','xxxx','author','tbody','html','samp','defs','map','hta:application','mspace','v:shape','figcaption','munderover','public:component','foreignobject','divs','annotation','polygon','a','center','footer','i','element','q','switch','command','y','menuitem','merror','order','abbr','kbd','lineargradient','nextid','fespecularlighting','noscript','style','img','param','li','mpadded','source','complex','listing','input','main','customers','fegaussianblur','big','msie:clientcaps','mtext','h5','noembed','wbr','d','marquee','isindex','output','em','fespotlight','public:defaults','meta','polyline','table','animate','rt','canvas','rp','item','rb','math','power','acronym','maction','base','br','radialgradient','rect','ol','g','area','o','filter','caption','plus','dialog','fecomposite','femerge','menclose','h2','h3','image','h1','h6','h4','blink','msqrt','ellipse','inetsdk:helloworld','span','spam','mphantom','data','name','attach','dfn','var','pagetype','cite','head','option','form','hr','link','line','semantics','b','colgroup','mtr','ul','applet','keygen','fecolormatrix','embed','mprescripts','mtd','pre','frameset','t:animatecolor','abstract','animatemotion','ins','mlabeledtr','mover','path','mpath','mrow','fetile','aside','c.classname','lname','myhero','nav','details','fname','picture','mfenced','track','quote','symbol','object','feflood','msup','msub','audio','e','textarea','url','svg','mask','script','u','time','bdo','quantity'];
+    for (i = 0; i < elements.length; i++) {
+        var oElement = document.createElement(elements[i])
+
+        for (var property in oElement) {
+            var oProperty = oElement[property]
+
+            if (typeof oProperty === 'function')
+                document.write("document.createElement('" + elements[i] + "')" + ',method,' + property + '\n');
+            else
+                document.write("document.createElement('" + elements[i] + "')" + ',property,' + property + '\n');
+        }
+    }
+    </script>
+    </head>
+    <body>
+    </body>
+    </html>
+    

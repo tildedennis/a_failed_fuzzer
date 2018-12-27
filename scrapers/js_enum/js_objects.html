@@ -1,0 +1,31 @@
+
+    <html>
+    <head>
+    <script>
+    var items = ['window','navigator','screen','history','location','document'];
+    for (i = 0; i < items.length; i++) {
+        try {
+            var oObject = eval(items[i]);
+        } catch(e) {
+            continue;
+        }
+
+        for (var property in oObject) {
+            try {
+                var oProperty = oObject[property];
+            } catch(e) {
+                continue;
+            }
+
+            if (typeof oProperty === 'function')
+                document.write(items[i] + ',method,' + property + '\n');
+            else
+                document.write(items[i] + ',property,' + property + '\n');
+        }
+    }
+    </script>
+    </head>
+    <body>
+    </body>
+    </html>
+    

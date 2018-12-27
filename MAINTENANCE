@@ -1,0 +1,35 @@
+- review crashes on app server
+    filter out known crashes
+
+- update skylined bugs
+    cd scrapers/skylined/
+    git clone https://github.com/SkyLined/Bugs.git
+    python get_bugs.py Bugs/
+    rm -rf Bugs/
+    cd ../../corpus/skylined/
+    git add .
+    git commit .
+
+- update js-vuln-db bugs
+    cd scrapers/js-vuln-db/
+    git clone https://github.com/tunz/js-vuln-db.git
+    python get_bugs.py js-vuln-db/
+    rm -rf js-vuln-db/
+    cd ../../corpus/js-vuln-db/
+    git add .
+    git commit .
+
+- hand sample 5 test cases
+    python fuzz_ie.py -p
+
+- loop sample 100 test cases
+    for i in `seq 100`; do
+        python fuzz_ie.py -p
+        done
+
+    review and clean up warnings
+        grep WARNING log
+
+- push new code to app server
+
+- back up code to projects on ipa
