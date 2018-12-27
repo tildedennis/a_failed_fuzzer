@@ -10,7 +10,7 @@ import time
 
 try:
     from cBugId import cBugId
-except KeyError:
+except:
     pass
 
 from cParser import cParser
